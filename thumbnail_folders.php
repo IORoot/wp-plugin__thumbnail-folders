@@ -69,7 +69,7 @@ class WP_Image_Editor_Custom_GD extends WP_Image_Editor_GD {
         $dimen  = explode('x', $prefix);
         foreach($sizes as $name => $size)
         {
-            if ($dimen[0] == $size['width']){
+            if ($dimen[0] == $size['width'] || $dimen[1] == $size['height']){
                 $prefix = $name;
             }
         }
@@ -129,7 +129,7 @@ class WP_Image_Editor_Custom_IM extends WP_Image_Editor_Imagick {
         $dimen  = explode('x', $prefix);
         foreach($sizes as $name => $size)
         {
-            if ($dimen[0] == $size['width']){
+            if ($dimen[0] == $size['width'] || $dimen[1] == $size['height']){
                 $prefix = $name;
             }
         }
